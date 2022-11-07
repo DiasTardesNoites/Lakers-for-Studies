@@ -1,0 +1,45 @@
+:root {
+    --bg: hsl(0, 0%, 0%);
+    --gradient: linear-gradient(-45deg, #502086 50%, #f9b802 50%);
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  figure {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+  
+  figure img,
+  .img-bg {
+    height: 240px;
+    width: 275px;
+  }
+  
+  .img-bg {
+    position: absolute;
+    background-image: linear-gradient(-50deg, #502086 50%, #f9b802 50%);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite;
+  }
+  
+  @keyframes pulse {
+    50% {
+      transform: scale(3.0);
+    }
+  }
+
+  
